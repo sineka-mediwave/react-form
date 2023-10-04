@@ -3,6 +3,7 @@ import React, { Component } from "react";
 interface inputProps {
   name: string;
   type: string;
+  label: string;
   placeholder: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -11,7 +12,7 @@ class Input extends Component<inputProps> {
     return (
       <div>
         <label>
-          {this.props.name}
+          {this.props.label}
           <input
             name={this.props.name}
             type={this.props.type}

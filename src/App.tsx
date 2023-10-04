@@ -9,28 +9,32 @@ function App() {
     age: 0,
   };
   const [input, setInput] = useState(initialValues);
-  const display = () => console.log(input);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
+  const display = () => console.log(input);
+
   return (
     <div className="App">
       <header className="App-header">
         <Input
-          name="First Name"
+          name="firstName"
           type="text"
+          label="Enter Your First Name"
           onChange={handleChange}
           placeholder="Enter your First name"
         />
         <Input
-          name="Second Name"
+          name="secondName"
           type="text"
+          label="Enter Your Second Name"
           onChange={handleChange}
           placeholder="Enter your Second name"
         />
         <Input
-          name="Your Age"
+          name="age"
           type="number"
+          label="Enter Your Age"
           onChange={handleChange}
           placeholder="Enter your age"
         />
