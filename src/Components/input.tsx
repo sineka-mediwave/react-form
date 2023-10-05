@@ -10,16 +10,14 @@ interface inputProps {
 class Input extends Component<inputProps> {
   render() {
     return (
-      <div>
-        <label>
-          {this.props.label}
-          <input
-            name={this.props.name}
-            type={this.props.type}
-            placeholder={this.props.placeholder}
-            onChange={this.props.onChange}
-          />
-        </label>
+      <div className="inputDiv">
+        <label>{this.props.label}</label>
+        <input
+          name={this.props.name}
+          type={this.props.type}
+          placeholder={this.props.placeholder}
+          onChange={this.props.onChange}
+        />
       </div>
     );
   }
